@@ -68,6 +68,28 @@ void printAll(StudentRecord *ptr)
         cout << "Program Grade : " << ptr[i].grade.programGrade << endl;
         cout << "Quiz Grade : " << ptr[i].grade.quizGrade << endl;
         cout << "GPA : " << ptr[i].grade.gpa << endl;
+        // grade
+        float gpa = ptr[i].grade.gpa;
+        if (gpa >= 9)
+        {
+            cout << "Grade : " << Grade::A << endl;
+        }
+        else if (gpa >= 8 && gpa < 9)
+        {
+            cout << "Grade : " << Grade::B << endl;
+        }
+        else if (gpa > 7 && gpa < 8)
+        {
+            cout << "Grade : " << Grade::C << endl;
+        }
+        else if (gpa > 6 && gpa < 7)
+        {
+            cout << "Grade : " << Grade::D << endl;
+        }
+        else
+        {
+            cout << "Grade : " << Grade::F << endl;
+        }
         cout << "----- End -----" << endl;
     }
 }
